@@ -11,5 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
++ (AppDelegate *)getInstance;
+- (UIViewController *)getVisibleViewController;
 
 @end

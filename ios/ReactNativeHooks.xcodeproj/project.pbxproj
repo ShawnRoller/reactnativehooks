@@ -12,6 +12,12 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		29B17695244F5126002CBAC0 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B17693244F5126002CBAC0 /* NativeViewController.m */; };
+		29B17696244F5126002CBAC0 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B17693244F5126002CBAC0 /* NativeViewController.m */; };
+		29B17697244F5126002CBAC0 /* NativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B17694244F5126002CBAC0 /* NativeViewController.xib */; };
+		29B17698244F5126002CBAC0 /* NativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B17694244F5126002CBAC0 /* NativeViewController.xib */; };
+		29B1769B244F5A97002CBAC0 /* ReactNativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B1769A244F5A97002CBAC0 /* ReactNativeManager.m */; };
+		29B1769C244F5A97002CBAC0 /* ReactNativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B1769A244F5A97002CBAC0 /* ReactNativeManager.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -54,6 +60,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeHooks/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeHooks/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeHooks/main.m; sourceTree = "<group>"; };
+		29B17692244F5126002CBAC0 /* NativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
+		29B17693244F5126002CBAC0 /* NativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
+		29B17694244F5126002CBAC0 /* NativeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeViewController.xib; sourceTree = "<group>"; };
+		29B17699244F5A97002CBAC0 /* ReactNativeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNativeManager.h; sourceTree = "<group>"; };
+		29B1769A244F5A97002CBAC0 /* ReactNativeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeManager.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ReactNativeHooks-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeHooks-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ReactNativeHooks-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactNativeHooks-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		530ED9D9B6FD4312F792CE34 /* Pods-ReactNativeHooks-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeHooks-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeHooks-tvOS/Pods-ReactNativeHooks-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +143,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				29B17692244F5126002CBAC0 /* NativeViewController.h */,
+				29B17693244F5126002CBAC0 /* NativeViewController.m */,
+				29B17694244F5126002CBAC0 /* NativeViewController.xib */,
+				29B17699244F5A97002CBAC0 /* ReactNativeManager.h */,
+				29B1769A244F5A97002CBAC0 /* ReactNativeManager.m */,
 			);
 			name = ReactNativeHooks;
 			sourceTree = "<group>";
@@ -194,7 +210,6 @@
 				AB8CD68C38722309A1B70A89 /* Pods-ReactNativeHooksTests.debug.xcconfig */,
 				F5C241136F8557809B02ADEE /* Pods-ReactNativeHooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +323,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -329,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B17698244F5126002CBAC0 /* NativeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +355,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				29B17697244F5126002CBAC0 /* NativeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +539,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* ReactNativeHooksTests.m in Sources */,
+				29B17696244F5126002CBAC0 /* NativeViewController.m in Sources */,
+				29B1769C244F5A97002CBAC0 /* ReactNativeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,8 +548,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B1769B244F5A97002CBAC0 /* ReactNativeManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				29B17695244F5126002CBAC0 /* NativeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

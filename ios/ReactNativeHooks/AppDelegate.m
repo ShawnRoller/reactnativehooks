@@ -10,23 +10,39 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "NativeViewController.h"
+
+static AppDelegate *_instance;
 
 @implementation AppDelegate
 
++ (AppDelegate *)getInstance{
+    return _instance;
+}
+
+- (UIViewController *)getVisibleViewController
+{
+    UIViewController *visibleViewController = self.window.rootViewController;
+    while(visibleViewController.presentedViewController != nil){
+        visibleViewController = visibleViewController.presentedViewController;
+    }
+    if([visibleViewController isKindOfClass:[UINavigationController class]]){
+        visibleViewController = ((UINavigationController *)visibleViewController).viewControllers.lastObject;
+    }
+    return visibleViewController;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"ReactNativeHooks"
-                                            initialProperties:nil];
-
-  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-
+  _instance = self;
+  
+  NativeViewController *rootViewController = [[NativeViewController alloc] initWithNibName:@"NativeViewController" bundle:[NSBundle mainBundle]];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
+  self.window.rootViewController = navigationController;
   [self.window makeKeyAndVisible];
+  
   return YES;
 }
 
