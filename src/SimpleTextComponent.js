@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { NativeModules, NativeEventEmitter, View, Text } from 'react-native';
 
 const NativeEvents = new NativeEventEmitter(NativeModules.ReactNativeManager);
@@ -7,31 +7,22 @@ const SimpleTextComponent = () => {
   const [nativeIsSetup, setNativeIsSetup] = useState(false);
   const [textToShow, setTextToShow] = useState('react-native');
 
-  useEffect(() => {
-    if (!nativeIsSetup) {
-      setupNativeVC();
-    }
-  }, [nativeIsSetup]);
+  const testTapped = useCallback(() => {
+    console.log('test tapped');
+    console.log(textToShow);
+    setTextToShow(textToShow === 'react-native' ? '' : 'react-native');
+  }, [textToShow]);
 
-  const setupNativeVC = () => {
+  useEffect(() => {
     // Set a listener to receive the menu taps
-    NativeEvents.addListener('test', () => {
+    const subscription = NativeEvents.addListener('test', () => {
       testTapped();
     });
 
     NativeModules.ReactNativeManager.setDelegate();
 
-    setNativeIsSetup(true);
-  };
-
-  const testTapped = () => {
-    console.log('test tapped');
-    setTextToShow(getTextToShow());
-  };
-
-  const getTextToShow = () => {
-    return textToShow === 'react-native' ? '' : 'react-native';
-  };
+    return () => subscription.remove();
+  }, [testTapped]);
 
   return (
     <View style={{ flex: 1 }}>
