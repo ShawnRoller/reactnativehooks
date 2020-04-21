@@ -5,7 +5,7 @@ const NativeEvents = new NativeEventEmitter(NativeModules.ReactNativeManager);
 
 const SimpleTextComponent = () => {
   const [nativeIsSetup, setNativeIsSetup] = useState(false);
-  const [textToShow, setTextToShow] = useState('react native');
+  const [textToShow, setTextToShow] = useState('react-native');
 
   useEffect(() => {
     if (!nativeIsSetup) {
@@ -26,9 +26,11 @@ const SimpleTextComponent = () => {
 
   const testTapped = () => {
     console.log('test tapped');
-    setTextToShow(
-      textToShow === 'react-native' ? 'test react-native' : 'react-native',
-    );
+    setTextToShow(getTextToShow());
+  };
+
+  const getTextToShow = () => {
+    return textToShow === 'react-native' ? '' : 'react-native';
   };
 
   return (
