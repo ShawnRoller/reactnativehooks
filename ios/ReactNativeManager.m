@@ -17,12 +17,17 @@
 
 - (NSArray<NSString *> *)supportedEvents
 {
-  return @[@"test"];
+  return @[@"test", @"displayText"];
 }
 
 - (void)testTapped
 {
   [self sendEventWithName:@"test" body:nil];
+}
+
+- (void)displayText
+{
+  [self sendEventWithName:@"displayText" body:@{@"text": @"this is a test"}];
 }
 
 - (void)setDelegate

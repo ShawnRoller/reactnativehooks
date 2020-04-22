@@ -31,14 +31,24 @@
                         <action selector="tappedTest:" destination="-1" eventType="touchUpInside" id="Eig-5l-atD"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5c-Df-YOz">
+                    <rect key="frame" x="0.0" y="221" width="414" height="30"/>
+                    <state key="normal" title="display text"/>
+                    <connections>
+                        <action selector="displayText:" destination="-1" eventType="touchUpInside" id="UOC-fP-0ew"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="n5c-Df-YOz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="0yp-4q-YGk"/>
                 <constraint firstItem="qcx-er-hnS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="0zX-9d-gdq"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="n5c-Df-YOz" secondAttribute="trailing" id="6K9-Cm-FS9"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="z2I-vQ-71U" secondAttribute="trailing" id="6eo-hd-dyw"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="qcx-er-hnS" secondAttribute="trailing" id="Guq-zG-EgJ"/>
                 <constraint firstItem="z2I-vQ-71U" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="dEB-Ci-wbx"/>
                 <constraint firstItem="z2I-vQ-71U" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="kQ5-th-Ot8"/>
+                <constraint firstItem="n5c-Df-YOz" firstAttribute="top" secondItem="qcx-er-hnS" secondAttribute="bottom" constant="8" id="nFY-Os-mmh"/>
                 <constraint firstItem="qcx-er-hnS" firstAttribute="top" secondItem="z2I-vQ-71U" secondAttribute="bottom" constant="18" id="psF-YJ-JN0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ReactNativeManagerDelegate
 - (void)testTapped;
+- (void)displayText;
 @end
 
 @interface RCT_EXTERN_MODULE(ReactNativeManager, RCTEventEmitter)

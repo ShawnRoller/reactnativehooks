@@ -42,4 +42,9 @@
   [self.delegate testTapped];
 }
 
+- (IBAction)displayText:(id)sender
+{
+  [self.delegate displayText];
+}
+
 @end
